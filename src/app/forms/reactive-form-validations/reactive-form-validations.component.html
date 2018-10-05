@@ -1,0 +1,23 @@
+<div class="login-form">
+  <h3 id="reactiveForm"> Reactive login form </h3>
+  <hr>
+  <div>
+    <form [formGroup]="profileForm" autocomplete="off" novalidate (ngSubmit)="login(profileForm.value)">
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input formControlName="firstName" id="firstName" type="text" class="form-control" placeholder="First Name..." [ngClass]="{'error' : !validateFirstName()}"/>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input formControlName="lastName" id="lastName" type="text" class="form-control" placeholder="Last Name..." [ngClass]="{'error' : !validateLastName()}"/>
+      </div>
+      <p>Dynamically adding a more than 8 char validation to FirstName </p>
+      <div class="form-group">
+          <label for="lastName">8 or more char</label>
+          <input formControlName="isFirstNameRequired" class="check-box" type="checkbox" ng-checked="all">
+        </div>
+
+      <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+  </div>
+</div>

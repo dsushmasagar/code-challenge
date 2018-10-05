@@ -1,0 +1,16 @@
+.login-form {
+    background: white;
+    margin:10px;
+    padding:10px;
+    border:1px solid #ddd;
+    border-radius: 10px;
+}
+em{
+    position: absolute;
+    /* right: 10px; */
+    color:#e05c65;
+    padding-left: 10px;
+}
+.form-control.ng-invalid.ng-touched{
+    border:1px solid red;
+}

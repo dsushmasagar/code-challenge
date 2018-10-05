@@ -1,0 +1,7 @@
+.currentWeatherComponent li:nth-child(even) { background: #eee; }
+
+.currentWeatherComponent li.list-group-item .wi{
+    margin-left: 3px;
+    color:orange;
+    
+}

@@ -1,0 +1,16 @@
+.fiveDayWeatherComponent {
+    li.list-group-item.headding {
+        color: $primaryBlue;
+        font-size: 14px;
+    }
+    li.list-group-item.headding .wi{
+        margin-left: 3px;
+        color: $primaryOrange;
+        
+    }
+    li.list-group-item {
+        font-size: 14px;
+    }
+    
+    li:nth-child(even) { background:$primaryGray; }
+}

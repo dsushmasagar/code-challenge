@@ -1,0 +1,6 @@
+.navbar-dark .navbar-nav .nav-link.active {
+    color: orange;
+}
+.logo{
+    font-size: 25px;
+}
