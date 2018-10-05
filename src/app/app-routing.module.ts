@@ -9,11 +9,10 @@ import { FormsComponent } from './forms/forms.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/weather', pathMatch: 'full' },
+  { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: 'weather', component: CurrentWeatherComponent },
   { path: 'forecast', component: FiveDayWeatherComponent },
- // { path: 'form', component: FormValidationsComponent }
- { path: 'form', component: FormsComponent }
+  { path: 'form', component: FormsComponent }
 ];
 
 @NgModule({
