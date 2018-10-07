@@ -5,11 +5,12 @@ import { CurrentWeatherComponent } from './current-weather/current-weather.compo
 import { FiveDayWeatherComponent } from './five-day-weather/five-day-weather.component';
 //import { FormValidationsComponent } from './form-validations/form-validations.component';
 import { FormsComponent } from './forms/forms.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: '', component:LandingPageComponent },
   { path: 'weather', component: CurrentWeatherComponent },
   { path: 'forecast', component: FiveDayWeatherComponent },
   { path: 'form', component: FormsComponent }

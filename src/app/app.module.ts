@@ -10,7 +10,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormValidationsComponent } from './forms/form-validations/form-validations.component';
 import { LoginService } from './login.service';
 import { FormsComponent } from './forms/forms.component';
-import { ReactiveFormValidationsComponent } from './forms/reactive-form-validations/reactive-form-validations.component'
+import { ReactiveFormValidationsComponent } from './forms/reactive-form-validations/reactive-form-validations.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { CustomerComponent } from './forms/customer/customer.component'
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { ReactiveFormValidationsComponent } from './forms/reactive-form-validati
     CurrentWeatherComponent,
     FormValidationsComponent,
     FormsComponent,
-    ReactiveFormValidationsComponent
+    ReactiveFormValidationsComponent,
+    LandingPageComponent,
+    CustomerComponent
   ],
   imports: [
     BrowserModule,

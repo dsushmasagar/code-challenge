@@ -15,18 +15,17 @@ export class ReactiveFormValidationsComponent implements OnInit {
   profileForm:FormGroup;
   private firstName:FormControl;
   private lastName:FormControl;
-  private isFirstNameRequired:FormControl;
+  private isRequireMoreThan8:FormControl;
   ngOnInit() {
     this.firstName = new FormControl("", Validators.required);
     this.lastName = new FormControl("", Validators.required);
-    this.isFirstNameRequired = new FormControl(FindValueSubscriber);
+    this.isRequireMoreThan8 = new FormControl(FindValueSubscriber);
     this.profileForm = new FormGroup({
       firstName:this.firstName,
       lastName:this.lastName,
-      isFirstNameRequired:this.isFirstNameRequired
-
+      isRequireMoreThan8:new FormControl(false)
     }) 
-    this.profileForm.get('isFirstNameRequired').valueChanges.subscribe(val => {
+    this.profileForm.get('isRequireMoreThan8').valueChanges.subscribe(val => {
       if(val){
         this.profileForm.controls["firstName"].setValidators([Validators.required, Validators.minLength(8)]);
         this.profileForm.controls["firstName"].updateValueAndValidity();
@@ -44,7 +43,13 @@ export class ReactiveFormValidationsComponent implements OnInit {
       console.log(formValues.firstName)
     }
   }
-
+  populateTestData(): void {
+    this.profileForm.patchValue ({
+      firstName: "Ram",
+      lastName: "Maradolla",
+      isRequireMoreThan8: true
+    })
+  }
   validateFirstName() {
     return this.firstName.valid || this.firstName.untouched;
   }

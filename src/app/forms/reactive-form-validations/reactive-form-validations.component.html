@@ -1,4 +1,4 @@
-<div class="login-form">
+<div class="demoform">
   <h3 id="reactiveForm"> Reactive login form </h3>
   <hr>
   <div>
@@ -14,10 +14,13 @@
       <p>Dynamically adding a more than 8 char validation to FirstName </p>
       <div class="form-group">
           <label for="lastName">8 or more char</label>
-          <input formControlName="isFirstNameRequired" class="check-box" type="checkbox" ng-checked="all">
+          <input formControlName="isRequireMoreThan8" class="check-box" type="checkbox" ng-checked="all">
         </div>
+      <span (mouseenter)="mouseOverLogin=true" (mouseleave)="mouseOverLogin=false">
+          <button type="submit" class="btn btn-primary" [disabled]="profileForm.invalid">Login</button>
+        </span>
 
-      <button type="submit" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-link" (click)="populateTestData()">Fill with TestData</button>
     </form>
   </div>
 </div>
